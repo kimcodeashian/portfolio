@@ -1,0 +1,49 @@
+.skills {
+	position: relative;
+	background: $BGlight;
+	&:before {
+		content: "";
+		border-right: 1px solid $gold;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		height: 50px;
+	}
+	.heading h2:before {
+		content: "My Toolbox"
+	}
+	.icons {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	i {
+		font-size: 120px;
+		color: $gold;
+		margin-bottom: 2rem;
+		background: linear-gradient( to left, #eddbc0, $gold2);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		width: 20%;
+		text-align: center;
+	}
+	/* Portrait tablet and small desktops */
+	@media (max-width: 1141px) {
+	}
+
+	/* Landscape phone to portrait tablet */
+	@media (max-width: 768px) {
+		i {
+			width: 33%;
+			font-size: 90px;
+		}
+	}
+
+	/* Landscape phones and down */
+	@media (max-width: 480px) {
+		i{
+			font-size:80px;
+		}
+	}
+
+}

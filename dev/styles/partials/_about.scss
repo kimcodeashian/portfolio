@@ -1,0 +1,71 @@
+.backgroundBleed {
+	background: url('../../assets/bg2.png') center/150% 120% no-repeat;
+	
+	background-color: #262626;
+	padding-top: 0;
+	position: relative;
+	&:after {
+		content: "";
+		border-right: 1px solid $gold;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		height: 50px;
+	}
+}
+.about {
+	.heading h2:before {
+		content: "About Me";
+	}
+	.description {
+		display: flex;
+		justify-content: space-between;
+		.text {
+			width: 69%;
+			margin-right: 20px;
+			align-self: center;
+		}
+		.headshot{
+			width: 30%;
+			min-width: 300px;
+			align-self: center;
+		}
+	}
+
+}
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	// background: red;
+	.backgroundBleed {
+		background-size: 200% 150%;
+	}
+	.about {
+		.description {
+			flex-direction: column-reverse;
+			.text {
+				width: 100%;
+				margin-right: 0;	
+				padding-top: 1rem;
+			}
+			.headshot{
+				width: 50%;
+				min-width: 300px;
+				display: flex;
+				align-items: flex-end;
+				margin: auto;
+			}
+		}
+	}
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+	.backgroundBleed {
+		background-size: 220% 150%;
+	}
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.backgroundBleed {
+		background-size: 250% 120%;
+	}
+}

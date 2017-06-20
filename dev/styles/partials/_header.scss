@@ -1,0 +1,280 @@
+header {
+	// background: black;
+  	background: 
+    /* top, transparent red, faked with gradient */ 
+	    linear-gradient(
+	      rgba(0,0,0, 0.5), 
+	      rgba(0,0,0, 0.5)
+        ),
+       url('../../assets/hero1.jpg') 100% top/cover;
+	text-transform: uppercase;
+	height: 100vh;
+	color: $white;
+	h1 {
+		font-size: 4.5rem;
+		margin-top: 1rem;
+	}
+	button {
+		margin-top: 8.5rem;
+	}
+}
+.header {
+	display: flex;
+	flex-direction: column;
+}
+//headerTop
+.logo {
+	border: 2px solid $gold;
+	font-size: 2rem;
+	padding: 6px 8px;
+	// background: rgba(33,33,33, 0.6);
+	span {
+		font-size:1rem;
+	}
+}
+
+nav {
+	max-width: 1660px;
+	width: 85%;
+	margin: 50px auto 0;
+	color: $white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	ul {
+		width: 40%;
+		min-width: 380px;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		justify-content: space-between;
+	}
+	li {
+		letter-spacing: 2.5px;
+		font-size: 0.875rem;
+	}
+}
+.headerMid {
+	position: absolute;
+	top: 50%;	
+	transform: translateY(-40%);
+	align-self: center;
+}
+//headerMid
+.developer {
+	display: flex;
+	align-items: center;
+	p {
+		opacity: 0.8;
+		font-size: 1.125rem;
+		letter-spacing: 0.3rem;
+		display: inline-block;
+		line-height: 80px;
+		margin: 0;
+		color: $white;
+	}
+	svg {
+		width: 80px;
+		display: inline;
+		fill: rgb(214, 186, 141);
+	}
+}
+
+#love {
+	color: $gold;
+	text-transform: lowercase;
+	font: {
+		style: italic;
+		weight: normal;
+	}
+}
+
+
+
+/*Vertical Sliding*/
+.slidingVertical{
+	display: inline;
+	span {
+		letter-spacing: 5px;
+		z-index: -1;
+	}
+}
+.slidingVertical span{
+	animation: topToBottom 15s linear infinite 0s;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+}
+.slidingVertical span:nth-child(2){
+	animation-delay: 3s;
+}
+.slidingVertical span:nth-child(3){
+	animation-delay: 6s;
+}
+.slidingVertical span:nth-child(4){
+	animation-delay: 9s;
+}
+.slidingVertical span:nth-child(5){
+	animation-delay: 12s;
+}
+
+/*topToBottom Animation*/
+@keyframes topToBottom{
+	0% { opacity: 0; }
+	5% { opacity: 0; transform: translateY(-80px); }
+	10% { opacity: 1; transform: translateY(0px); }
+	25% { opacity: 1; transform: translateY(0px); }
+	30% { opacity: 0; transform: translateY(80px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+
+
+
+.burger-check {
+	  display: none;
+}
+
+@media (max-width: 990px) {
+	header {
+		button {
+		    margin-top: 7.5rem;
+		    z-index: 500;
+		}
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 660px) {
+	section.active {
+
+	}
+	a.active {
+	  padding: 10px 10px;
+	  border-bottom: 2px solid $gold;
+	}
+	
+	nav {
+		justify-content: center;
+	}
+	// Burger menu button
+	$burger--thickness: 4px;
+	.burger {
+		position: fixed;
+		right: 4%;
+		top: 4%;
+		z-index: 900;
+		$width: 28px;
+		display: inline-block;
+	  	border: 0;
+		background: none;
+		outline: 0;
+		padding: 0;
+		cursor: pointer;
+
+		border-bottom: $burger--thickness solid currentColor;
+		width: $width;
+
+		transition: border-bottom 1s ease-in-out;
+
+		// Fix for extra space in Firefox
+		&::-moz-focus-inner {
+			border: 0;
+			padding: 0;
+		}	 
+
+		&:before {
+			content: "";
+			display: block;
+			border-bottom: $burger--thickness solid currentColor;
+			width: 100%;
+			margin-bottom: 5px;
+			transition: transform 0.5s ease-in-out;         
+		}
+
+		&:after {
+			content: "";
+			display: block;
+			border-bottom: $burger--thickness solid currentColor;
+			width: 100%;
+			margin-bottom: 5px;
+			transition: transform 0.5s ease-in-out;
+		}
+	}
+
+	
+	
+	.burger-check:checked ~ .burger {
+	  border-bottom: $burger--thickness solid transparent;
+	  transition: border-bottom 0.8s ease-in-out;
+
+	  &:before {
+	    transform: rotate(-405deg) translateY(1px) translateX(-3px);    
+	    transition: transform 0.5s ease-in-out;
+	  }
+
+	  &:after {
+	    transform: rotate(405deg) translateY(-4px) translateX(-5px);      
+	    transition: transform 0.5s ease-in-out;
+	  }
+	}
+
+	// * * * Navigation * * *
+	$navigation__transition: max-height 0.5s ease-in-out;
+
+	.mainNav {
+	  overflow: hidden;
+	  max-height: 0;
+	  height: 250px;
+	  transition: $navigation__transition;
+	  flex-direction: column;
+	  text-align: center;
+	  position: fixed;
+	  right: 0;
+	  top: 6%;
+	  z-index: 400;
+	  min-width: 100px;
+	  width: 150px;
+	  li {
+		  background: $BGlight;
+	  	padding: 20px 0;
+	  	// width: 90px;
+	  }
+	}
+
+	.burger-check:checked ~ .mainNav {
+	  max-height: 500px;
+	  transition: $navigation__transition;
+	}
+}
+/* Landscape phones and down */
+@media (max-width: 500px) {
+	header {
+		h1 {
+			font-size: 3.3rem;
+		}
+	}
+	.headerMid {
+		top: 60%;
+	}
+	.developer {
+		position: absolute;
+		top: -100px;
+		p {
+			line-height: 2;
+			font-size: 1rem;
+		}
+	}
+	@keyframes topToBottom{
+		5% { opacity: 0; transform: translateY(-50px); }
+		10% { opacity: 1; transform: translateY(0px); }
+		25% { opacity: 1; transform: translateY(0px); }
+		30% { opacity: 0; transform: translateY(50px); }
+	}
+}
+// .slidingVertical{
+// 	display: inline;
+// 	span {
+// 		width: 90%;
+// 	}
+// }

@@ -1,0 +1,83 @@
+.contact {
+	background: $BGdark;
+	position: relative;
+	.heading {
+		z-index: 100;
+		position: relative;
+		h2:before {
+			content: "Get in Touch"
+		}
+	}
+	form {
+		width: 65%;
+		max-width: 850px;
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		position: relative;
+		z-index: 100;
+	}
+	input, textarea {
+		background: transparent;
+		padding: 15px;
+		outline: none;
+		border: 1px solid transparent;
+		border-bottom: 1px solid $gold;
+		color: $text;
+		margin: 5px;
+		&:focus {
+			border: 1px solid $gold;
+		}
+	}
+	.topRow {
+		display: flex;
+		justify-content: space-between;
+		input {
+			width: 49%;
+		}
+	}
+	img {
+		position: absolute;
+		z-index: 1;
+		width: 35%;
+		left: 50%;
+		top: 3rem;
+		transform: translateX(-50%);
+	}
+	button {
+		color: $gold;
+	}
+	/* Portrait tablet and small desktops */
+	@media (max-width: 940px) {
+		form {
+			width: 75%;
+		}
+		.topRow {
+			flex-direction: column;
+			input {
+				width: 98%;
+			}
+		}
+		img {
+			width: 40%;
+		}
+	}
+
+	/* Landscape phone to portrait tablet */
+	@media (max-width: 768px) {
+		form {
+			width: 85%;
+		}
+		img {
+			width: 50%;
+		}
+	}
+
+	/* Landscape phones and down */
+	@media (max-width: 480px) {
+		form {
+			width: 100%;
+		}
+	}
+
+}

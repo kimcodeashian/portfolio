@@ -1,0 +1,75 @@
+.portfolio {
+	position: relative;
+	padding-bottom: 0;
+	.heading {
+		h2 {
+			margin-top: 80px;
+			&:before {
+				content: "Ideas to Life"
+			}
+		}
+	}
+	h3 {
+		margin: 15px;
+	}
+	figure {
+		display: flex;
+		justify-content: space-between;
+		margin: 2rem 0;
+		&:nth-of-type(even) {
+   			 flex-direction: row-reverse;
+		}
+		.project {
+			width: 48%;
+			// padding: 15px;
+			align-self: center;
+			transition: all 0.5s;
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
+		article {
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 30px 15px;
+			p {
+				padding: 10px;
+				text-align: left;
+				font-size: 1rem;
+			}
+		}
+	}
+	.buttons {
+		text-align: center;
+		button {
+			margin: 6px;
+		}
+	}
+	/* Portrait tablet and small desktops */
+	@media (max-width: 940px) {
+		figure {
+			flex-direction: column;
+			border-bottom: 1px solid $gold;
+			&:nth-of-type(even) {
+	   			 flex-direction: column;
+			}
+			&:last-child {
+				border: none;
+			}
+			.project {
+				width: 100%;
+			}
+			article {
+				width: 100%;
+			}
+		}
+	}
+	@media (max-width: 468px) {
+		.buttons button {
+			margin: 2px;
+
+		}
+	}	
+}

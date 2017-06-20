@@ -1,9 +1,151 @@
-@import './partials/setup';
 
-.container {
-	max-width: 900px;
-	margin: 0 auto;
+//VARIABLES
+$font: 'Fira Sans', sans-serif;
+$text: #ababab;
+	// Colors
+$gold: rgb(214, 186, 141);
+$gold2: rgb(174, 134, 88);
+$white: white;
+$gradient: linear-gradient(to right, $gold, $gold2);
+	//BG Colors
+$BGdark: rgb(33, 33, 33); // darkest grey
+$BGlight: #303030; // medium grey
+$BGhover: rgb(63, 63, 63); // light grey
+
+$socialGrey: rgb(171, 171, 171);
+
+@import './partials/setup';
+@import './partials/header';
+@import './partials/about';
+@import './partials/portfolio';
+@import './partials/skills';
+@import './partials/contact';
+@import './partials/footer';
+//----- General Styling -----
+html {
+	font-size: 100%;
 }
 body {
-	background: mediumvioletred;
+	font-family: $font;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+	&:hover {
+		color: $gold;
+		@media (max-width: 660px) {
+		color: $white;
+		}
+	}
+}
+button {
+	background: $BGlight;
+	margin-top: 1rem;
+	color: $white;
+	outline: none;
+	border: 1px solid transparent;
+	padding: 20px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	transition: all 0.5s;
+	font: {
+		size: 1rem;
+		weight: 500;
+	}
+	&:focus {
+		border: 1px solid $gold;
+		background: $BGhover;
+	}
+	&:hover {
+		background: $BGhover;
+		color: $gold;
+	}
+
+}
+p {
+	color: $text;
+	font-size: 1.125rem;
+	line-height: 1.78;
+	letter-spacing: 1px;
+}
+img {
+	width: 100%;
+	max-width: 100%;
+	display: block;
+}
+h3 {
+	font: {
+		size: 2rem;
+		weight: 500;
+	}
+	letter-spacing: 5px;
+	text-align: center;
+	text-transform: uppercase;
+	color: $white;
+}
+h4 {
+	font: {
+		size: 1.1rem;
+		weight: 400;
+		style: italic;
+	}
+	color: $gold;
+	text-align: center;
+	letter-spacing: 2px;
+}
+section {
+	padding: 6.5rem 0;
+}
+
+
+.wrapper {
+	max-width: 1400px;
+	width: 80%;
+	margin: 0 auto;
+}
+.heading {
+	text-align: center;
+	h2 {
+		display: inline-block;
+		font-size: 3.5rem;
+		color: $gold;
+		letter-spacing: 6px;
+		background: $gradient;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		position: relative;
+		&:before {
+			content: "Fill In";
+			color: $white;
+			letter-spacing: 5.5px;
+			text-transform: uppercase;
+			-webkit-text-fill-color: initial;
+			display: block;
+			top: -30px;
+			width: 100%;
+			font: {
+				weight: 400;
+				size: 1.125rem;
+			}
+
+		}
+	}
+}
+@media (max-width: 940px) {
+	.wrapper {
+		width: 85%;
+	}
+}
+
+@media (max-width: 768px) {
+	.wrapper {
+		width: 90%;
+	}
+}
+
+@media (max-width: 480px) {
+
+	.wrapper {
+		width: 95%;
+	}
 }

@@ -2,16 +2,190 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>My Project</title>
+	<title>Kimberly Luu</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="public/styles/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 </head>
 <body>
 
-	<div class="container">
-		<h1>okokok</h1>
-	</div>
+	<header>
+		<div class="header">
+			<nav>
+				<div class="logo">
+					<a href="index.html">KL</a>
+				</div>
+				<div class="burgerNav">
+				<input class="burger-check" id="burger-check" type="checkbox"><label for="burger-check" class="burger"></label>
+				<ul class="mainNav"> 
+					<li><a href="#about">About</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+					
+				</div>
+			</nav>
+			
+			<div class="headerMid wrapper">
+				<div class="developer">
+					<svg viewBox="0 0 128 128">
+					<path class="cls-2" d="M105.72,54.9,73.14,39.42l-1.83-.9-1.12,2.28L64,53.41V68.3l9.15-18.08,21.5,9.57L71.56,70.16l-.87.47,0,1.56v6.18l0,3.14L73,80.38l32.78-15.69a2,2,0,0,0,.92-2V56.91A2,2,0,0,0,105.72,54.9Z"></path>
+					<path class="cls-1" d="M56,69.39l-21.79-9.6L57.51,49.42l1.76-.7,0-1.33V37.76L55.87,39.2,21.94,54.89a2.26,2.26,0,0,0-1.28,2v5.77a2.22,2.22,0,0,0,1.24,2L55.34,80.18l2,.9,1.21-2.26L64,68.3V53.41Z"></path>
+					</svg>
+					<p>Front-End Developer</p>
+				</div>
+				<h1 class="sentence">I <span id="love">love </span><br>
+					<div class="slidingVertical">
+						<span>Clean Code</span>
+						<span>Creative Solutions</span>
+						<span>Modern Design</span>
+						<span>Basketball</span>
+						<span>Burritos</span>
+					</div> 
+				</h1> 
+				<button><a href="#portfolio">Things I Made</a></button>
+			</div>
 
-	<script src="public/scripts/main.js"></script>
+		</div>
+	</header>
 	
+	<section class="backgroundBleed">
+		<section class="about" id="about">
+		 	<div class="wrapper">
+			<div class="heading">
+				<h2>Kimberly Luu</h2>
+			</div>
+		 		
+			<div class="description">
+				<div class="text">
+					<p>A problem solver by nature – I love taking on intricate challenges and providing creative solutions with clean code and solid logic. I have a background in mathematics and computer science, so naturally I see in numbers and code.
+					<br><br>I enjoy creating beautiful interactive web experiences and collaborating with others who share my enthusiasm for web development. When I'm not coding, I'm playing basketball, eating burritos or walking a husky.</p>
+				</div>
+				<div class="headshot">
+					<img src="assets/headshot2.jpg" alt="">
+				</div>
+			</div>
+			</div>
+		</section>
+
+		<section class="portfolio" id="portfolio">
+			<div class="wrapper">
+				<div class="heading">
+					<h2>Portfolio</h2>
+				</div>
+
+				<figure>
+					<div class="project">
+						<a href="https://mappetite-88939.firebaseapp.com/" target="_blank">
+							<img src="assets/screenies/hackerhub.jpg" alt="">
+						</a>
+					</div>
+					<article>
+						<h3>HackerHub</h3>
+						<p>Utilized React and Firebase to create a web app where users can log in and create personal posts. These posts can be seen on individual profiles as well as the explore page</p>
+						<h4>React / Firebase / JavaScript / ES6 / Gulp / HTML / Sass</h4>
+						<div class="buttons">
+							<button><a href="https://mappetite-88939.firebaseapp.com/" target="_blank">View Live</a></button>
+							<button><a href="https://github.com/kimcodeashian/hackerhub" target="_blank">View GitHub</a></button>
+						</div>
+					</article>
+				</figure>
+
+				<figure>
+					<div class="project">
+						<img src="assets/screenies/artistsphere.jpg" alt="">
+					</div>
+					<article>
+						<h3>ArtistSphere</h3>
+						<p>ArtistSphere generates a list of recommended artists and their top 10 songs based on an artist search. Built using the Spotify API.</p>
+						<h4>jQuery / Handlebars / Spotify API / HTML / CSS / Sass</h4>
+						<div class="buttons">
+							<button><a href="http://www.kimberlyluu.ca/artistsphere" target="_blank">View Live</a></button>
+							<button><a href="https://github.com/kimcodeashian/artistsphere" target="_blank">View GitHub</a></button>
+						</div>
+					</article>
+				</figure>
+
+				<figure>
+					<div class="project">
+						<img src="assets/screenies/mojo.jpg" alt="">
+					</div>
+					<article>
+						<h3>PSD TO HTML</h3>
+						<p>Created a website based off a single page PSD. Pixel perfect & responsive on all screens.</p>
+						<h4>HTML / CSS / Sass / Responsive Design</h4>
+						<div class="buttons">
+							<button><a href="http://www.kimberlyluu.ca/mojo" target="_blank">View Live</a></button>
+							<button><a href="https://github.com/kimcodeashian/psd-to-html" target="_blank">View GitHub</a></button>
+						</div>
+					</article>
+				</figure>
+			</div>
+		</section>
+	</section>
+	
+
+	<section class="skills" id="skills">
+		<div class="wrapper">
+			<div class="heading">
+				<h2>Skills</h2>
+			</div>
+
+			<div class="icons">
+				<i class="devicon-html5-plain-wordmark" aria-label="html5 icon"></i>
+				<i class="devicon-css3-plain-wordmark" aria-label="css3 icon"></i>
+				<i class="devicon-sass-original" aria-label="sass icon"></i>
+				<i class="devicon-javascript-plain" aria-label="javascript icon" title="Javascript"></i>
+				<i class="devicon-jquery-plain-wordmark" aria-label="jquery icon"></i>
+				<i class="devicon-react-original-wordmark" aria-label="react icon"></i>
+				<i class="devicon-gulp-plain" aria-label="gulp icon"></i>
+				<i class="devicon-git-plain-wordmark" aria-label="git icon"></i>
+				<i class="devicon-github-plain-wordmark" aria-label="github icon"></i>
+			</div>
+		</div>
+	</section>
+
+	<section class="contact" id="contact">
+		<img src="assets/shape.png" alt="">
+		<div class="wrapper">
+			<div class="heading">
+				<h2>Contact</h2>
+			</div>
+			
+			<form action="">
+				<div class="topRow">
+					<input type="text" name="name" placeholder="Name" aria-label="Name">
+					<input type="text" name="email" placeholder="E-mail" aria-label="Email">	
+				</div>
+				<input type="text" name="subject" placeholder="Subject" aria-label="Subject">
+				<textarea name="message" cols="30" rows="5" placeholder="Message" aria-label="Message"></textarea>
+				<button type="submit" aria-label="Submit"><i class="ion-ios-paperplane-outline"></i> Send</button>
+			</form>
+		</div>
+	</section>
+
+	<footer>
+		<div class="wrapper">
+
+			<p><i class="ion-ios-email-outline"></i>hello[at]kimberlyluu.ca <br> <i>&copy</i>Kimberly Luu 2017</p>
+			<div class="socialMedia">
+				<div class="socialBorder">
+					<a href=""><i class="ion-social-twitter"></i></a>
+				</div>
+				<div class="socialBorder">
+					<a href=""><i class="ion-social-linkedin"></i></a>
+				</div>
+				<div class="socialBorder">
+					<a href=""><i id="github" class="ion-social-github"></i></a>
+				</div>
+			</div>
+			
+		</div>
+	</footer>
+	<script src="public/scripts/main.js"></script>
 </body>
 </html>

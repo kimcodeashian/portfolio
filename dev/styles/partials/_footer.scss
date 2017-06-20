@@ -1,0 +1,66 @@
+footer {
+	background: $BGlight;
+	padding: 2rem 0;
+	#italic {
+		font-style: italic;
+	}
+	.wrapper {
+		justify-content: space-between;
+		display: flex;
+		align-items: center;
+	}
+	p {
+		margin: 0;
+		color: $text;
+		font-size: 0.875rem;
+		line-height: 1.2;
+		letter-spacing: 2px;
+		i {
+			font: {
+				size: 1.6rem;
+				style: normal;
+			}
+			margin-right: 3px;
+			position: relative;
+			top: 4px;
+		}
+	}
+	.socialMedia {
+		display: flex;
+		justify-content: space-around;
+		width: 180px;
+	}
+	.socialBorder {
+		border: 1px solid $text;
+		width: 50px;
+		height: 50px;	
+		text-align: center;
+		border-radius: 50%;
+		background: transparent;
+		transition: all 0.5s;
+
+		i {
+			color: $text;
+			font-size: 1.3rem;
+			line-height: 50px;
+			transition: all 0.5s;
+		}
+		&:hover {
+			background: $gold;
+			border: 1px solid $gold;
+			i {
+				color: $BGlight;
+			}
+		}
+	}
+	/* Landscape phones and down */
+	@media (max-width: 480px) {
+		.wrapper {
+			flex-direction: column;
+			text-align: center;
+		}
+		.socialBorder {
+			margin-top: 1rem;
+		}
+	}
+}
