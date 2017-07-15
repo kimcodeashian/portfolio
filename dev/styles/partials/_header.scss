@@ -16,6 +16,8 @@ header {
 	}
 	button {
 		margin-top: 8.5rem;
+		position: relative;
+	    z-index: 300;
 	}
 }
 .header {
@@ -32,7 +34,9 @@ header {
 		font-size:1rem;
 	}
 }
-
+.headerMid {
+	padding-top: 92px;
+}
 nav {
 	max-width: 1660px;
 	width: 85%;
@@ -40,7 +44,7 @@ nav {
 	color: $white;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	
 	ul {
 		width: 40%;
 		min-width: 380px;
@@ -54,13 +58,6 @@ nav {
 		font-size: 0.875rem;
 	}
 }
-.headerMid {
-	position: absolute;
-	top: 50%;	
-	transform: translateY(-40%);
-	align-self: center;
-}
-//headerMid
 .developer {
 	display: flex;
 	align-items: center;
@@ -96,7 +93,6 @@ nav {
 	display: inline;
 	span {
 		letter-spacing: 5px;
-		z-index: -1;
 	}
 }
 .slidingVertical span{
@@ -139,7 +135,6 @@ nav {
 	header {
 		button {
 		    margin-top: 7.5rem;
-		    z-index: 500;
 		}
 	}
 }
@@ -255,11 +250,11 @@ nav {
 		}
 	}
 	.headerMid {
-		top: 60%;
+		padding-top: 37px;
 	}
 	.developer {
-		position: absolute;
-		top: -100px;
+		// position: absolute;
+		// top: -100px;
 		p {
 			line-height: 2;
 			font-size: 1rem;
@@ -272,6 +267,19 @@ nav {
 		30% { opacity: 0; transform: translateY(50px); }
 	}
 }
+/* Landscape phones and down */
+@media (max-width: 400px) {
+	header {
+		h1 {
+			font-size: 2.8rem;
+		    margin-top: 3rem;
+		}
+		button {
+			margin-top: 6.5rem;
+		}
+	}
+}
+
 // .slidingVertical{
 // 	display: inline;
 // 	span {

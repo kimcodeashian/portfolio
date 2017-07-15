@@ -108,12 +108,15 @@ section {
 	h2 {
 		display: inline-block;
 		font-size: 3.5rem;
-		color: $gold;
+		// color: $gold;
 		letter-spacing: 6px;
 		background: $gradient;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
+		color: transparent;
+
 		position: relative;
+		clip: auto;
 		&:before {
 			content: "Fill In";
 			color: $white;
@@ -145,7 +148,4 @@ section {
 
 @media (max-width: 480px) {
 
-	.wrapper {
-		width: 95%;
-	}
 }

@@ -2,13 +2,24 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Kimberly Luu</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<title>Kimberly Luu | Front End Developer</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="public/styles/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-101877099-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
 </head>
 <body>
 
@@ -47,7 +58,7 @@
 						<span>Burritos</span>
 					</div> 
 				</h1> 
-				<button><a href="#portfolio">Things I Made</a></button>
+				<a href="#portfolio"><button>Things I Made</button></a>
 			</div>
 
 		</div>
@@ -62,8 +73,8 @@
 		 		
 			<div class="description">
 				<div class="text">
-					<p>A problem solver by nature – I love taking on intricate challenges and providing creative solutions with clean code and solid logic. I have a background in mathematics and computer science, so naturally I see in numbers and code.
-					<br><br>I enjoy creating beautiful interactive web experiences and collaborating with others who share my enthusiasm for web development. When I'm not coding, I'm playing basketball, eating burritos or walking a husky.</p>
+					<p>A problem solver by nature – I love taking on intricate challenges and implementing creative solutions with clean code and solid logic. I have a background in mathematics and computer science, so naturally I see in numbers and code.
+					<br><br>I enjoy creating beautiful interactive web experiences with JavaScript and React, as well as collaborating with others who share my enthusiasm for web development. When I'm not coding, I'm playing basketball, eating burritos or walking my cat.</p>
 				</div>
 				<div class="headshot">
 					<img src="assets/headshot2.jpg" alt="">
@@ -80,47 +91,66 @@
 
 				<figure>
 					<div class="project">
-						<a href="https://mappetite-88939.firebaseapp.com/" target="_blank">
+						<a href="https://www.hackerhub.ca/" target="_blank">
 							<img src="assets/screenies/hackerhub.jpg" alt="">
 						</a>
 					</div>
 					<article>
-						<h3>HackerHub</h3>
-						<p>Utilized React and Firebase to create a web app where users can log in and create personal posts. These posts can be seen on individual profiles as well as the explore page</p>
-						<h4>React / Firebase / JavaScript / ES6 / Gulp / HTML / Sass</h4>
+						<h3>React.js & Firebase App</h3>
+						<p>HackerHub is a user-authenticated social platform for developers which I built using React.js and Firebase. Users can explore profiles of others, view posts, and upload to the hub.</p>
+						<h4>React / Firebase / JavaScript / Sass</h4>
 						<div class="buttons">
-							<button><a href="https://mappetite-88939.firebaseapp.com/" target="_blank">View Live</a></button>
-							<button><a href="https://github.com/kimcodeashian/hackerhub" target="_blank">View GitHub</a></button>
+							<a href="https://www.hackerhub.ca/" target="_blank">
+									<button>View Live</button>
+							</a>
+
+
+							<a href="https://github.com/kimcodeashian/hackerhub" target="_blank">
+									<button>View GitHub</button>
+							</a>
 						</div>
 					</article>
 				</figure>
 
 				<figure>
 					<div class="project">
-						<img src="assets/screenies/artistsphere.jpg" alt="">
+						<a href="http://www.artistsphere.ca" target="_blank">
+							<img src="assets/screenies/artistsphere.jpg" alt="">
+						</a>
 					</div>
 					<article>
-						<h3>ArtistSphere</h3>
-						<p>ArtistSphere generates a list of recommended artists and their top 10 songs based on an artist search. Built using the Spotify API.</p>
-						<h4>jQuery / Handlebars / Spotify API / HTML / CSS / Sass</h4>
+						<h3>API Web Application</h3>
+						<p>Artistphere is an interactive web application that allows users to search an artist's name to get a list of related artists and their top 10 songs. Built using the Spotify API and Handlebars.js</p>
+						<h4>jQuery / Handlebars / API / JavaScript / Sass</h4>
 						<div class="buttons">
-							<button><a href="http://www.kimberlyluu.ca/artistsphere" target="_blank">View Live</a></button>
-							<button><a href="https://github.com/kimcodeashian/artistsphere" target="_blank">View GitHub</a></button>
+							<a href="http://www.artistsphere.ca" target="_blank">
+									<button>View Live</button>
+							</a>
+
+							<a href="https://github.com/kimcodeashian/artistsphere" target="_blank">
+									<button>View GitHub</button>
+							</a>
 						</div>
 					</article>
 				</figure>
 
 				<figure>
 					<div class="project">
-						<img src="assets/screenies/mojo.jpg" alt="">
+						<a href="http://www.kimberlyluu.ca/mojo" target="_blank">
+							<img src="assets/screenies/mojo.jpg" alt="">
+						</a>
 					</div>
 					<article>
 						<h3>PSD TO HTML</h3>
-						<p>Created a website based off a single page PSD. Pixel perfect & responsive on all screens.</p>
-						<h4>HTML / CSS / Sass / Responsive Design</h4>
+						<p>Created a single page website given a PSD design layout. Pixel perfect & responsive on all screens.</p>
+						<h4>HTML / Sass / Responsive Design</h4>
 						<div class="buttons">
-							<button><a href="http://www.kimberlyluu.ca/mojo" target="_blank">View Live</a></button>
-							<button><a href="https://github.com/kimcodeashian/psd-to-html" target="_blank">View GitHub</a></button>
+							<a href="http://www.kimberlyluu.ca/mojo" target="_blank">
+									<button>View Live</button>
+							</a>
+							<a href="https://github.com/kimcodeashian/psd-to-html" target="_blank">
+									<button>View GitHub</button>
+							</a>
 						</div>
 					</article>
 				</figure>
@@ -156,7 +186,7 @@
 				<h2>Contact</h2>
 			</div>
 			
-			<form action="">
+			<form method="POST" action="https://formspree.io/hello@kimberlyluu.ca">
 				<div class="topRow">
 					<input type="text" name="name" placeholder="Name" aria-label="Name">
 					<input type="text" name="email" placeholder="E-mail" aria-label="Email">	
@@ -171,17 +201,18 @@
 	<footer>
 		<div class="wrapper">
 
-			<p><i class="ion-ios-email-outline"></i>hello[at]kimberlyluu.ca <br> <i>&copy</i>Kimberly Luu 2017</p>
+			<p><i class="ion-ios-email-outline"></i>hello[at]kimberlyluu.ca<br> <i>&copy</i>Kimberly Luu 2017</p>
 			<div class="socialMedia">
-				<div class="socialBorder">
-					<a href=""><i class="ion-social-twitter"></i></a>
-				</div>
-				<div class="socialBorder">
-					<a href=""><i class="ion-social-linkedin"></i></a>
-				</div>
-				<div class="socialBorder">
-					<a href=""><i id="github" class="ion-social-github"></i></a>
-				</div>
+				<a href="https://twitter.com/kimcodeashian" target="_blank">
+					<i class="ion-social-twitter"></i>
+				</a>
+				<a href="https://www.linkedin.com/in/kimberlyluuca" target="_blank">
+					<i class="ion-social-linkedin"></i>
+				</a>
+
+				<a href="https://github.com/kimcodeashian" target="_blank">
+					<i id="github" class="ion-social-github"></i>
+				</a>
 			</div>
 			
 		</div>

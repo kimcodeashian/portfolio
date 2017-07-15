@@ -5,7 +5,7 @@
 		h2 {
 			margin-top: 80px;
 			&:before {
-				content: "Ideas to Life"
+				content: "My Favourites"
 			}
 		}
 	}
@@ -45,6 +45,10 @@
 		text-align: center;
 		button {
 			margin: 6px;
+			background: #c6aa82; 
+			&:hover {
+				background: $BGhover;
+			}	
 		}
 	}
 	/* Portrait tablet and small desktops */
@@ -69,7 +73,9 @@
 	@media (max-width: 468px) {
 		.buttons button {
 			margin: 2px;
-
+		}
+		.heading h2 {
+				margin-top: 0px;
 		}
 	}	
 }
