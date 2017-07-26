@@ -22,6 +22,11 @@ $socialGrey: rgb(171, 171, 171);
 @import './partials/contact';
 @import './partials/footer';
 //----- General Styling -----
+::selection {
+  background: #e5d1b2; /* WebKit/Blink Browsers */
+  color: $white;
+}
+
 html {
 	font-size: 100%;
 }
